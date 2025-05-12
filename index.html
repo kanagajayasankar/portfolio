@@ -8,14 +8,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="main-grid">
+    <div class="card" onclick="openPage('about.html')">About</div>
+    <div class="card" onclick="openPage('projects.html')">Projects</div>
+    <div class="card" onclick="openPage('contact.html')">Contact</div>
     <div class="center-photo">
       <img src="assets/profile.jpg" alt="Your Photo" />
-    </div>
-    <div class="cards">
-      <div class="card" onclick="openPage('about.html')">About</div>
-      <div class="card" onclick="openPage('projects.html')">Projects</div>
-      <div class="card" onclick="openPage('contact.html')">Contact</div>
     </div>
   </div>
 
@@ -26,7 +24,7 @@
 
     window.onload = () => {
       document.querySelectorAll('.card').forEach((card, index) => {
-        setTimeout(() => card.classList.add('visible'), 100 * index);
+        setTimeout(() => card.classList.add('visible'), 150 * index);
       });
     };
   </script>
